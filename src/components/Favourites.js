@@ -32,10 +32,10 @@ function Favourites() {
 
     //for genres get -> to build those blue/grey buttons
     useEffect(() => {
-        let temp = favourites.map((movie, key) => genreids[movie.genre_ids[0]])
+        let temp = favourites.map((movie) => genreids[movie.genre_ids[0]])
         temp = new Set(temp)
         setGenres(["All Genres", ...temp]);
-    }, [favourites])
+    }, [favourites, genreids])
 
     const redirectPage = (type, id) => {
         navigate(`/${type}/${id}`);
@@ -218,7 +218,7 @@ function Favourites() {
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap">
                                             <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                                {genreids[movie.genre_ids[1]]}
+                                                {genreids[movie.genre_ids[0]]}
                                             </span>
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-center">

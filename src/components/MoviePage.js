@@ -16,7 +16,7 @@ const MoviePage = () => {
             .then(res => {
                 setMovie(res.data);
             })
-    }, [id])
+    }, [id, type])
 
     return (
         <>
