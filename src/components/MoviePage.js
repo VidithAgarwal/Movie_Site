@@ -21,7 +21,7 @@ const MoviePage = () => {
     return (
         <>
             <div className={`bg-[url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})] bg_image`}>
-                <div className='content container mb-4'>
+                <div className='content mb-4'>
                     <div className='poster'>
                         <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt='' />
                     </div>
